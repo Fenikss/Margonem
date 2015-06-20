@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : DarkTibiaFun
+Source Server         : margonem
 Source Server Version : 50624
 Source Host           : localhost:3306
 Source Database       : margonem
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2015-06-20 20:02:50
+Date: 2015-06-20 20:36:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
