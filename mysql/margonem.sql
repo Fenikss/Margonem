@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : margonem
-Source Server Version : 50620
+Source Server         : DarkTibiaFun
+Source Server Version : 50624
 Source Host           : localhost:3306
 Source Database       : margonem
 
 Target Server Type    : MYSQL
-Target Server Version : 50620
+Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2014-10-15 19:25:56
+Date: 2015-06-20 20:02:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,13 +37,18 @@ INSERT INTO `mapa` VALUES ('1', 'Ithan', 'data/mapy/ithan3.png');
 DROP TABLE IF EXISTS `npc`;
 CREATE TABLE `npc` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nazwa` varchar(255) NOT NULL,
+  `obrazek` varchar(255) NOT NULL,
+  `mapa` varchar(255) NOT NULL,
+  `x` varchar(255) NOT NULL,
+  `y` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of npc
 -- ----------------------------
-INSERT INTO `npc` VALUES ('1');
+INSERT INTO `npc` VALUES ('1', '', '', '', '', '');
 
 -- ----------------------------
 -- Table structure for player
@@ -66,5 +71,5 @@ CREATE TABLE `player` (
 -- ----------------------------
 -- Records of player
 -- ----------------------------
-INSERT INTO `player` VALUES ('1', 'test', 'test', 'Fenikss', '1', 'Mag', 'data/avatar/paladyn/m_pal22.gif', '35', '37', '1');
+INSERT INTO `player` VALUES ('1', 'test', '123', 'Fenikss', '1', 'Mag', 'data/avatar/paladyn/m_pal22.gif', '35', '37', '1');
 INSERT INTO `player` VALUES ('2', '2', '2', 'matri', '1', 'none', 'data/avatar/paladyn/m_pal22.gif', '35', '37', '1');
