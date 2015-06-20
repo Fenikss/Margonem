@@ -1,5 +1,3 @@
-// ENTERTAINMENT PRODUCTION BY FENNIKS ALL RIGHTS RESERVED
-// COPYRIGHT @ 2014 ALL RIGHTS RESERVED
 <?php require_once('config/config.php'); ?> 
 <?php require_once('system/mapy.php'); ?>
 
@@ -78,5 +76,3 @@ var chatmode = 0;
 var x = <?php echo "".(($player['x'] * -32) + 240).""; ?>;
 var y = <?php echo "".(($player['y'] * -32) + 240).""; ?>;
 </script>
-// ENTERTAINMENT PRODUCTION BY FENNIKS ALL RIGHTS RESERVED
-// COPYRIGHT @ 2014 ALL RIGHTS RESERVED

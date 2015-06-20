@@ -1,8 +1,55 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_14d1=["left","click","div#l","right","div#p","up","div#g","down","div#d","div#oHero","keyCode","keydown","ready","POST","system/idz.php","move=","background-image","url(",")","css","#oMap","map_poz(x+=",",y+=",");animation(0,",");",");animation(1,",");animation(2,",");animation(3,","animation(0,","ajax","background-position","px ","px","#oHero"];var loading=false;$(document)[_$_14d1[12]](function(){$(_$_14d1[2])[_$_14d1[1]](function(){send(_$_14d1[0],8,0,1)});$(_$_14d1[4])[_$_14d1[1]](function(){send(_$_14d1[3],-8,0,2)});$(_$_14d1[6])[_$_14d1[1]](function(){send(_$_14d1[5],0,8,3)});$(_$_14d1[8])[_$_14d1[1]](function(){send(_$_14d1[7],0,-8,0)});$(_$_14d1[9])[_$_14d1[1]](function(){});$(document)[_$_14d1[11]](function(a){if(a[_$_14d1[10]]==65&&chatmode==0){send(_$_14d1[0],8,0,1)};if(a[_$_14d1[10]]==87&&chatmode==0){send(_$_14d1[5],0,8,3)};if(a[_$_14d1[10]]==68&&chatmode==0){send(_$_14d1[3],-8,0,2)};if(a[_$_14d1[10]]==83&&chatmode==0){send(_$_14d1[7],0,-8,0)};});});function send(h,f,g,c){if(loading){return false};loading=true;$[_$_14d1[29]]({type:_$_14d1[13],url:_$_14d1[14],data:_$_14d1[15]+h,success:function(i){loading=false;if(i){$(_$_14d1[20])[_$_14d1[19]](_$_14d1[16],_$_14d1[17]+i+_$_14d1[18]);setTimeout(_$_14d1[21]+f+_$_14d1[22]+g+_$_14d1[23]+c+_$_14d1[24],10);setTimeout(_$_14d1[21]+f+_$_14d1[22]+g+_$_14d1[25]+c+_$_14d1[24],20);setTimeout(_$_14d1[21]+f+_$_14d1[22]+g+_$_14d1[26]+c+_$_14d1[24],30);setTimeout(_$_14d1[21]+f+_$_14d1[22]+g+_$_14d1[27]+c+_$_14d1[24],40);setTimeout(_$_14d1[28]+c+_$_14d1[24],50);};}});}function map_poz(d,e){$(_$_14d1[20])[_$_14d1[19]](_$_14d1[30],d+_$_14d1[31]+e+_$_14d1[32])}function animation(b,c){$(_$_14d1[33])[_$_14d1[19]](_$_14d1[30],(-b*32)+_$_14d1[31]+(-c*48)+_$_14d1[32])}
+var loading = false;
+$(document).ready(function(){
+
+$("div#l").click(function(){
+send('left',8,0,1);
+});
+$("div#p").click(function(){
+send('right',-8,0,2);
+});
+$("div#g").click(function(){
+
+send('up',0,8,3);
+});
+$("div#d").click(function(){
+send('down',0,-8,0);
+});
+$("div#oHero").click(function(){
+});
+
+$(document).keydown(function (event) {
+if(event.keyCode==65 && chatmode==0){send('left',8,0,1);}
+if(event.keyCode==87 && chatmode==0){send('up',0,8,3);}
+if(event.keyCode==68 && chatmode==0){send('right',-8,0,2);}
+if(event.keyCode==83 && chatmode==0){send('down',0,-8,0);}	
+});
+});
+
+function send(page,ox,oy,direction){
+if(loading) return false;
+loading = true;
+$.ajax({
+type: "POST",
+url: "system/idz.php",
+data:"move="+page,
+success : function (msg){
+loading = false;
+if (msg){
+$('#oMap').css("background-image","url("+msg+")");
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(0,"+direction+");",10);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(1,"+direction+");",20);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(2,"+direction+");",30);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(3,"+direction+");",40);
+setTimeout("animation(0,"+direction+");",50);
+}
+
+}
+});
+}
+
+function map_poz(x,y){
+$("#oMap").css("background-position", x+"px "+y+"px");
+}
+function animation(cage,direction){
+$("#oHero").css("background-position",(-cage*32)+"px "+(-direction*48)+"px");
+}

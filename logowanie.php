@@ -1,5 +1,3 @@
-// ENTERTAINMENT PRODUCTION BY FENNIKS ALL RIGHTS RESERVED
-// COPYRIGHT @ 2014 ALL RIGHTS RESERVED
 <?php require_once('game/config/config.php'); ?>
 <?php
 
@@ -38,6 +36,3 @@ echo "<option value='".$wczytuje['id']."'>".$wczytuje['nazwa']."(".$wczytuje['po
 <input type='submit' value='Zaloguj'><br>
 </form>
 <hr>
-
-// ENTERTAINMENT PRODUCTION BY FENNIKS ALL RIGHTS RESERVED
-// COPYRIGHT @ 2014 ALL RIGHTS RESERVED
