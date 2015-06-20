@@ -70,9 +70,6 @@ background-position: 0px 0px; z-index: 29;" id="oHero"></div>
 
 
 <script type='text/javascript'>
-var pp = 0;
-var shop = 0;
-var chatmode = 0;
 var x = <?php echo "".(($player['x'] * -32) + 240).""; ?>;
 var y = <?php echo "".(($player['y'] * -32) + 240).""; ?>;
 </script>
