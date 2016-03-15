@@ -30,9 +30,26 @@ while($wczytuje = @mysql_fetch_array($code)){
 echo "<option value='".$wczytuje['id']."'>".$wczytuje['nazwa']."(".$wczytuje['poziom'].")(".$wczytuje['profesja'].")</option>";
 }
 ?>
-</select><br>
-<input type='text' name='login' style='width: 100px;'><br>
-<input type='password' name='haslo' style='width: 100px;'><br>
-<input type='submit' value='Zaloguj'><br>
-</form>
-<hr>
+</select>
+<html>
+	<head>
+	<style type="text/css">
+		#submit{
+		background-image: url(submit.png);
+		width: 110px;
+		height: 30px;
+		border: 0;
+		}
+	</style>
+	</head>
+	<body>
+	<form action="" method="post">
+		<fieldset>
+		<legend>Logowanie</legend>
+		<label for="login">Login: </label><input type="text" name="login" id="login"/><br />
+		<label for="haslo">Hasło: </label><input type="password" name="haslo" id="haslo"/><br />
+		<input type="submit" value="" id="submit"/>
+		</fieldset>
+	</form>
+	</body>
+</html>
