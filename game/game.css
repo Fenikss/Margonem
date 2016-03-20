@@ -4,6 +4,7 @@
 	width:32px;
 	height:48px;
 }
+
 #oMap {
 	position:absolute;
 	top:0;
@@ -11,4 +12,16 @@
 	width:512px;
 	height:512px;
 	background-repeat:no-repeat;
+}
+
+#status {
+	position:absolute;
+	top:519px;
+	left:30px;
+	height:20px;
+	overflow:hidden;
+	z-index:306;	
+	color:#ccc;
+	font:12px arial,verdana;
+	padding:2px;
 }
